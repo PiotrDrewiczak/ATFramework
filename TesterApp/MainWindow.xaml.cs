@@ -56,7 +56,7 @@ namespace TesterApp
 
         private void LoadXmlFiles()
         {
-            this.openFileDialog = new()
+            this.openFileDialog = new ()
             {
                 InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop),
                 DefaultExt = this.configurationExtension,
