@@ -21,16 +21,23 @@ namespace TesterApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        private List<string> filePaths;
         public MainWindow()
         {
             InitializeComponent();
+            filePaths = new List<string>();
         }
-
         private void Load_Click(object sender, RoutedEventArgs e)
         {
+            LoadXmlFiles();
+        }
+        private void LoadXmlFiles()
+        {
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.InitialDirectory=Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             openFileDialog.ShowDialog();
+            if (!String.IsNullOrEmpty(openFileDialog.FileName))
+                filePaths.Add(openFileDialog.FileName);
         }
     }
 }
