@@ -3,23 +3,27 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesterApp", "TesterApp.csproj", "{5DE89366-41A2-4D26-8882-8575A672CC74}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TesterApp", "TesterApp.csproj", "{5DE89366-41A2-4D26-8882-8575A672CC74}"
 	ProjectSection(ProjectDependencies) = postProject
 		{A8A83001-ED35-4221-867F-733ADFCA4A71} = {A8A83001-ED35-4221-867F-733ADFCA4A71}
 		{9554C616-5E16-4619-847B-6AD9D95A2994} = {9554C616-5E16-4619-847B-6AD9D95A2994}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scenarios", "..\Scenarios\Scenarios.csproj", "{A8A83001-ED35-4221-867F-733ADFCA4A71}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scenarios", "..\Scenarios\Scenarios.csproj", "{A8A83001-ED35-4221-867F-733ADFCA4A71}"
 	ProjectSection(ProjectDependencies) = postProject
 		{0357366C-76C5-404B-9348-2FF0741D3DC8} = {0357366C-76C5-404B-9348-2FF0741D3DC8}
-		{FC8241F9-3809-4A1E-81E4-1C1BE5649004} = {FC8241F9-3809-4A1E-81E4-1C1BE5649004}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportGenerator", "..\ReportGenerator\ReportGenerator.csproj", "{FC8241F9-3809-4A1E-81E4-1C1BE5649004}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataGenerator", "..\DataGenerator\DataGenerator.csproj", "{0357366C-76C5-404B-9348-2FF0741D3DC8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGenerator", "..\DataGenerator\DataGenerator.csproj", "{0357366C-76C5-404B-9348-2FF0741D3DC8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConfigurationParser", "..\ConfigurationParser\ConfigurationParser.csproj", "{9554C616-5E16-4619-847B-6AD9D95A2994}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigurationParser", "..\ConfigurationParser\ConfigurationParser.csproj", "{9554C616-5E16-4619-847B-6AD9D95A2994}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportGenerator", "..\ReportGenerator\ReportGenerator.csproj", "{B2A8A5AE-70A3-4D9B-BC71-309CADEED5CD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2950A649-6A6E-4933-A26A-B8E8E19A9859}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +39,6 @@ Global
 		{A8A83001-ED35-4221-867F-733ADFCA4A71}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8A83001-ED35-4221-867F-733ADFCA4A71}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8A83001-ED35-4221-867F-733ADFCA4A71}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FC8241F9-3809-4A1E-81E4-1C1BE5649004}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FC8241F9-3809-4A1E-81E4-1C1BE5649004}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FC8241F9-3809-4A1E-81E4-1C1BE5649004}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FC8241F9-3809-4A1E-81E4-1C1BE5649004}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0357366C-76C5-404B-9348-2FF0741D3DC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0357366C-76C5-404B-9348-2FF0741D3DC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0357366C-76C5-404B-9348-2FF0741D3DC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -47,6 +47,10 @@ Global
 		{9554C616-5E16-4619-847B-6AD9D95A2994}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9554C616-5E16-4619-847B-6AD9D95A2994}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9554C616-5E16-4619-847B-6AD9D95A2994}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2A8A5AE-70A3-4D9B-BC71-309CADEED5CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2A8A5AE-70A3-4D9B-BC71-309CADEED5CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2A8A5AE-70A3-4D9B-BC71-309CADEED5CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2A8A5AE-70A3-4D9B-BC71-309CADEED5CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

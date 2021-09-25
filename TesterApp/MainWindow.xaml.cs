@@ -1,43 +1,54 @@
-﻿using Microsoft.Win32;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿// <copyright file="MainWindow.xaml.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace TesterApp
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Windows;
+    using Microsoft.Win32;
+
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for MainWindow.xaml.
     /// </summary>
     public partial class MainWindow : Window
     {
-        private List<string> filePaths;
+        private readonly List<string> fileNamePathsList;
+        private readonly string configurationExtension = "xml";
+        private readonly string configurationFilter = "XML Files|*.xml";
+        private OpenFileDialog openFileDialog;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="MainWindow"/> class.
+        /// </summary>
         public MainWindow()
         {
-            InitializeComponent();
-            filePaths = new List<string>();
+            this.InitializeComponent();
+            this.fileNamePathsList = new List<string>();
+            this.XmlView.ItemsSource = this.fileNamePathsList;
         }
+
         private void Load_Click(object sender, RoutedEventArgs e)
         {
-            LoadXmlFiles();
+            this.LoadXmlFiles();
+            this.XmlView.Items.Refresh();
         }
+
         private void LoadXmlFiles()
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            openFileDialog.ShowDialog();
-            if (!String.IsNullOrEmpty(openFileDialog.FileName))
-                filePaths.Add(openFileDialog.FileName);
+            this.openFileDialog = new ()
+            {
+                InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop),
+                DefaultExt = this.configurationExtension,
+                Filter = this.configurationFilter,
+            };
+
+            this.openFileDialog.ShowDialog();
+            if (!string.IsNullOrEmpty(this.openFileDialog.FileName))
+            {
+                this.fileNamePathsList.Add(this.openFileDialog.FileName);
+            }
         }
     }
 }
